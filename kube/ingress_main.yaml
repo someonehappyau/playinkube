@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-main
+spec:
+  rules:
+    - host: www.playinkube.com
+      http:
+        paths:
+          - backend:
+              serviceName: service-webmain
+              servicePort: 3001
