@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-msuser
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: msuser
+  template:
+    metadata:
+      labels:
+        app: msuser
+    spec:
+      containers:
+      - name: msuser
+        image: playinkube/msuser
+        imagePullPolicy: IfNotPresent
