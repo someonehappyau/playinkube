@@ -1,0 +1,21 @@
+<div>
+<div class="container" style="text-align: center">
+  <h1>Sign In</h1>
+  <div class="signin-form">
+    <mat-form-field class="form-field">
+      <mat-label>Username</mat-label>
+      <input #username matInput>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="form-field">
+      <mat-label>Password</mat-label>
+      <input #password matInput>
+    </mat-form-field>
+    <br/>
+    <button mat-button class="form-field" color="primary" (click)="login(username.value,password.value)">Sign in</button>
+
+  </div>
+</div>
+</div>
+
+

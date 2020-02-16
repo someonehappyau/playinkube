@@ -18,5 +18,5 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: service-webmain
+              serviceName: service-wwwmain
               servicePort: 3001

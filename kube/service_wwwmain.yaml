@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-wwwmain
+spec:
+  ports:
+    - name: http
+      port: 3001
+      targetPort: 80
+  selector:
+    app: wwwmain
+  type: ClusterIP

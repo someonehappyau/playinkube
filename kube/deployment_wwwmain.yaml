@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-wwwmain
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webmain
+  template:
+    metadata:
+      labels:
+        app: webmain
+    spec:
+      containers:
+      - name: wwwmain
+        image: playinkube/wwwmain
+        imagePullPolicy: IfNotPresent

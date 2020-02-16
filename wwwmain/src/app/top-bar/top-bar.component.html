@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>World On Wheels</span>
+    <span class="spacer"></span>
+    <div style="margin: 15px;" *ngIf="user.nickname!==''">
+      <span>{{user.nickname}}</span>
+    </div>
+    <button mat-flat-button *ngIf="user.nickname!==''" (click)="logoff()">Log Off</button>
+    <button mat-flat-button *ngIf="user.nickname===''" (click)="signin()">Sign In</button>
+  </mat-toolbar-row>
+</mat-toolbar>
