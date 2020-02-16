@@ -1,0 +1,13 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ingress-wwwmain
+spec:
+  rules:
+    - host: www.playinkube.com
+      http:
+        paths:
+          - path: 
+            backend:
+              serviceName: service-wwwmain
+              servicePort: 3001
