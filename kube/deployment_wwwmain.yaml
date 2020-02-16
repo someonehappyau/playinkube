@@ -6,11 +6,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: webmain
+      app: wwwmain
   template:
     metadata:
       labels:
-        app: webmain
+        app: wwwmain
     spec:
       containers:
       - name: wwwmain
