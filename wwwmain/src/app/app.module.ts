@@ -15,6 +15,7 @@ import { TopBarComponent } from './top-bar/top-bar.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import {UserService} from "./user.service";
 import {HttpClientModule} from "@angular/common/http";
+import {MatMenuModule} from "@angular/material/menu";
 
 
 @NgModule({
@@ -28,13 +29,11 @@ import {HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      { path: '', component: SignInComponent }
-    ]),
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
