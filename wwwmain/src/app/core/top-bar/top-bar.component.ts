@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from "../user.service";
+import {UserService} from "../../user.service";
 import { Subscription } from "rxjs";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-top-bar',
@@ -12,7 +13,8 @@ export class TopBarComponent implements OnInit {
   subscription: Subscription;
 
   constructor(
-    private userService: UserService
+    private userService: UserService,
+    private router: Router
   ) {
     this.subscription = userService.getUser().subscribe(user => {this.user=user; console.log(user);});
   }
@@ -30,6 +32,6 @@ export class TopBarComponent implements OnInit {
   }
 
   signin(){
-
+    this.router.navigate(['/user/sign-in'])
   }
 }

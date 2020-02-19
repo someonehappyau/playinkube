@@ -7,22 +7,21 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatInputModule } from "@angular/material/input";
-import { MatButtonModule } from "@angular/material/button";
 
-import { TopBarComponent } from './top-bar/top-bar.component';
-import { SignInComponent } from './sign-in/sign-in.component';
+import { TopBarComponent } from './core/top-bar/top-bar.component';
 import {UserService} from "./user.service";
 import {HttpClientModule} from "@angular/common/http";
 import {MatMenuModule} from "@angular/material/menu";
+import { UserModule } from './modules/user/user.module';
+import {MatButtonModule} from "@angular/material";
+import { HomePageComponent } from './core/home-page/home-page.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    SignInComponent
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,10 +29,9 @@ import {MatMenuModule} from "@angular/material/menu";
     BrowserAnimationsModule,
     HttpClientModule,
     MatToolbarModule,
-    MatFormFieldModule,
-    MatInputModule,
+    MatMenuModule,
     MatButtonModule,
-    MatMenuModule
+    UserModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent]
